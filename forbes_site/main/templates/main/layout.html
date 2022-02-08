@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}"/>
+    <title>Ресторан Forbes</title>
+</head>
+<body>
+    <header>
+        <div id="header-main-block">
+            <div id="logo">Forbes</div>
+            
+            <nav id="nav">
+                <div id="cart">
+                    <div id="cart-items-count">0</div>
+                    <a id="cart-link" href="#"><img width="50px" height="50px" src="{% static 'main/img/shopping-cart.svg' %}"></a>
+                </div>
+                <a class="nav-link" href="{% url 'main' %}">ГЛАВНАЯ</a>
+                <a class="nav-link" href="#">О НАС</a>
+                <a class="nav-link" href="#">КОНТАКТЫ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <footer>
+        <div id="footer-text1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit molestias rerum laboriosam delectus nihil, perspiciatis beatae totam qui soluta corporis doloribus quisquam?
+        </div>
+        <div id="footer-text2">
+            &copy 2022 Ресторан &#171Forbes&#187
+        </div>
+    </footer>
+
+</body>
+</html>
