@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="main-texts-block">
+        <p id="h1-text">Меню</p>
+        <p id="desc-text">
+            Заказывайте и ешьте наши самые вкусные вкусняшки. Не пожалеете!
+        </p>
+    </div>
+    <div id="store-block">
+        {% for product in products %}
+        <div class="store-item">
+            <div class="item-info">
+                <img class="item-img" src="{% if product.image %}{{ product.image.url }}
+                                            {% else %}{% static 'main/img/no_photo.jpg' %}{% endif %}" alt="">
+                <div class="item-desc">
+                    <p class="item-desc-text1">{{ product.name }}</p>
+                    <p class="item-desc-text2">{{ product.description }}</p>
+                    <div class="item-price">
+                        <span class="price-value">{{ product.price }}</span>
+                        <span class="currency-symbol">&#8381</span>
+                    </div>
+                    <a class="order-item-link">ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

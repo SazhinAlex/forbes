@@ -21,8 +21,8 @@
 				<p style="font-style: italic;">{{ product.description }}</p>
 				<hr>
 
-				<button class="btn btn-outline-secondary add-btn update-cart"
-						data-product="{{ product.id }}">ЗАКАЗАТЬ</button>
+				<button class="btn btn-outline-secondary add-btn update-cart" data-action="add"
+						data-product_id="{{ product.id }}">ЗАКАЗАТЬ</button>
 				<a class="btn btn-outline-success hidden" href="#">Подробнее</a>
 				<h4 style="display: inline-block; float: right"><strong>{{ product.price }}&#8381</strong></h4>
 
@@ -32,5 +32,4 @@
 
 	</div>
 
-	<script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
 {% endblock %}
