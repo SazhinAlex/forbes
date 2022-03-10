@@ -9,4 +9,4 @@ Stack:
   * JavaScript
   * HTML
   * CSS
-  * Bootsrap
+  * Bootstrap
